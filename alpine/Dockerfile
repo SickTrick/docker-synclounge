@@ -9,7 +9,7 @@ ENV autoJoinRoom=
 ENV autoJoinPassword=
 ENV plexToken=
 
-COPY run.sh /opt/run.sh
+COPY run.sh /config/run.sh
 
 RUN apk add --no-cache git make g++ python bash \
   && mkdir -p /config && cd /config \
@@ -24,4 +24,4 @@ RUN apk add --no-cache git make g++ python bash \
 
 EXPOSE 8088
 
-CMD ["/opt/run.sh"]
+CMD ["/config/run.sh"]
