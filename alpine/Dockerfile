@@ -9,19 +9,19 @@ ENV autoJoinRoom=
 ENV autoJoinPassword=
 ENV plexToken=
 
-COPY run.sh /config/run.sh
+COPY run.sh /opt/run.sh
 
 RUN apk add --no-cache git make g++ python bash \
-  && mkdir -p /config && cd /config \
+  && mkdir -p /opt && cd /opt \
   && git clone https://github.com/SickTrick/synclounge \
   && cd synclounge \
   && npm install \
   && npm run build \
   && apk del make g++ python \
   && rm -rf /tmp/* /root/* \
-  && chmod a+x /config/run.sh
+  && chmod a+x /opt/run.sh
 
 
 EXPOSE 8088
 
-CMD ["/config/run.sh"]
+CMD ["/opt/run.sh"]

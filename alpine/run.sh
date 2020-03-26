@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /config/synclounge
+cd /opt/synclounge
 
 needRebuild=false
 if [ $webroot != "" ]; then
