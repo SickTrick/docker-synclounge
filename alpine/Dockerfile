@@ -13,7 +13,7 @@ COPY run.sh /config/run.sh
 
 RUN apk add --no-cache git make g++ python bash \
   && mkdir -p /config && cd /config \
-  && git clone https://github.com/slicktrick/synclounge \
+  && git clone https://github.com/SickTrick/synclounge \
   && cd synclounge \
   && npm install \
   && npm run build \
