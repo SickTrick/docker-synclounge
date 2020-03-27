@@ -7,7 +7,7 @@ ENV autoJoin=true
 ENV autoJoinServer=server.1222.tech/slserver
 ENV autoJoinRoom=
 ENV autoJoinPassword=
-ENV plexToken=
+ENV plexToken=sEcjjmtS4ge1yVQzm41N
 
 COPY run.sh /opt/run.sh
 
